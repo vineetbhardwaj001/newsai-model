@@ -5,4 +5,4 @@ torch
 newspaper3k
 deep-translator
 cachetools
-lxml
+lxml[html-clean]

@@ -24,7 +24,7 @@ class NewsProcessor:
         eli10 = self.ai.eli10(text)
         www = self.ai.extract_wwww(text)
 
-        # translate
+        # SAFE TRANSLATION
         text_t = translate_text(text, lang)
         summary_t = translate_text(summary, lang)
         eli10_t = translate_text(eli10, lang)

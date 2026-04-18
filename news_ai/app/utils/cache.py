@@ -1,6 +1,6 @@
-from cachetools import LRUCache
+from cachetools import TTLCache
 
-cache = LRUCache(maxsize=100)
+cache = TTLCache(maxsize=200, ttl=600)
 
 def get_cache(key):
     return cache.get(key)

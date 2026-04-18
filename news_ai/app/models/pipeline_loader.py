@@ -7,5 +7,8 @@ class ModelLoader:
     @classmethod
     def get_summarizer(cls):
         if cls._summarizer is None:
-            cls._summarizer = pipeline("summarization", model=MODEL_SUMMARY)
+            cls._summarizer = pipeline(
+                "summarization",
+                model=MODEL_SUMMARY
+            )
         return cls._summarizer
