@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  news-ai:
+    build: .
+    container_name: news_ai_app
+    restart: always
+
+    volumes:
+      - .:/app
+      - ./logs:/app/logs
+
+    environment:
+      - ENV=production
+
+    ports:
+      - "8000:8000"

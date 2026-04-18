@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+transformers
+torch
+newspaper3k
+deep-translator
+cachetools
+lxml
