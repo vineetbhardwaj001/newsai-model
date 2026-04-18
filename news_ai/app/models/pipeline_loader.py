@@ -1,5 +1,4 @@
 from transformers import pipeline
-from app.config import MODEL_SUMMARY
 
 class ModelLoader:
     _summarizer = None
@@ -8,7 +7,7 @@ class ModelLoader:
     def get_summarizer(cls):
         if cls._summarizer is None:
             cls._summarizer = pipeline(
-                "summarization",
-                model=MODEL_SUMMARY
+                "text2text-generation",
+                model="facebook/bart-large-cnn"
             )
         return cls._summarizer
